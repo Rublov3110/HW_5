@@ -8,20 +8,28 @@ namespace HW_5
 {
     public class Actions
     {
-        public Result Method1()
+        private Logger _logger;
+
+        public Actions()
         {
-            // Start method:
+            _logger = new Logger();
+        }
+
+        public Result StartMethod()
+        {
+            _logger.Info("Start method");
             return new Result() { Status = true };
         }
 
-        public Result Method2()
+        public Result SkippedLogicInMethod()
         {
-            // Skipped logic in method:
+            _logger.Warneng("Start method");
             return new Result() { Status = true };
         }
 
-        public Result Method3()
+        public Result BrokeLogic()
         {
+            _logger.Erorr("I broke a logic");
             return new Result() { ErrorMasseg = "I broke a logic", Status = false };
         }
     }
