@@ -10,17 +10,15 @@ namespace HW_5
     public class Starter
     {
         private Actions _actions;
-        private Logger _logger;
 
         public Starter()
         {
             _actions = new Actions();
-            _logger = new Logger();
         }
 
         public void Run()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 100; i++)
             {
                 Random random = new Random();
                 int rn = random.Next(1, 4);
@@ -38,7 +36,5 @@ namespace HW_5
                 }
             }
         }
-
-        File.File.WriteAllText("log.txt" _logger.Word);
     }
 }
